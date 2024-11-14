@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 87.5%; /* 14px */
+  background-color: hsl(0, 0%, 96%);
+}
+
+:root {
+  --base-gap: clamp(20px, 3vw, 60px);
+  --base-width: clamp(250px, 100%, 320px);
+}
+
+div.container {
+  width: 100%;
+  padding: var(--base-gap);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--base-gap);
+}
+
+div.top-wrapper {
+  padding: calc(var(--base-gap) / 2);
+  background-color: #dedede;
+  border: 0.2rem solid #ccc;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  row-gap: calc(var(--base-gap) / 2)
+}
+
+div.top-wrapper > h2 {
+  line-height: 2;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Kalam", cursive;
+}
+
+div.select-wrapper {
+  width: var(--base-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--base-gap);
+}
+
+div.select-wrapper > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #eee;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  width: calc(100% / 2);
+}
+
+div.input-wrapper {
+  width: var(--base-width);
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--base-gap) / 2);
+  padding: calc(var(--base-gap) / 2);
+  background-color: #dedede;
+  border: 0.2rem solid #ccc;
+  /* Optionals */
+  transition: height 200ms;
+  height: calc-size(auto);
+}
+
+div.input-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--base-gap) / 2);
+}
+
+div.input-field-wrapper > input {
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  background-color: #eee;
+  border: none;
+  outline: none;
+}
+
+div.input-button-wrapper {
+  width: var(--base-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--base-gap);
+}
+
+div.input-button-wrapper > button {
+  background-color: #eee;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  width: calc(100% / 2);
+}
+
+div.output-wrapper {
+  display: none;
+}
+
+div.output-wrapper.show {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--base-gap);
+}
+
+div.canvas-wrapper {
+  width: var(--base-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--base-gap) / 2);
+  background-color: #dedede;
+  border: 0.2rem solid #ccc;
+}
+
+div.canvas-wrapper > canvas {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+button.download-button {
+  width: var(--base-width);
+  height: 60px;
+}
+
+div.output-button-wrapper {
+  width: var(--base-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--base-gap);
+  background-color: #dedede;
+  padding: calc(var(--base-gap) / 2);
+  border: 0.2rem solid #ccc;
+}
+
+div.output-button-wrapper > button {
+  background-color: #eee;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  width: calc(100% / 2);
+}
