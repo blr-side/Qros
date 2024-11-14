@@ -2,26 +2,66 @@
 <html lang="en">
 <head>
   
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>QrCode Generator | RkaDevs</title>
+  <meta name="title" content="QrCode Generator">
+  <meta name="description" content="Generate Text To QrCode.">
+  <meta name="author" content="Ramen Kalita or RkaDevs">
+  <meta name="keywords" content="QrCode Generator, QrCode Maker, QrCode Creator, Text To QrCode">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Generate high-quality QR codes instantly with Qros. Create custom QR codes for websites, text. Simple, fast, and free QR code generation.">
-  <meta name="author" content="Beya Lora Ramen">
-  <meta name="keywords" content="QR code generator, QR code maker, create QR codes, free QR code, custom QR code, QR code online, QR code for website, QR code generator free, QR code creator">
-  <link rel="icon" href="res/qrCode.ico" type="image/x-icon">
-  <title>Qros - QrCode Generator</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="res/QRious.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css">
+  <meta name="theme-color" content="#169be3">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.js"></script>
+  <script src="index.js" defer></script>
   
 </head>
 <body>
   
-  <div id="qrContainer">
-    <input id="qrInput" type="text" placeholder="Enter Your QrCode Text" />
-    <canvas id="qrCanvas"></canvas>
+  <div class="container">
+    <div class="top-wrapper">
+      <h2>Qrcode & Theme</h2>
+      
+      <div class="select-wrapper">
+        <select id="qrcode-select">
+          <option value="text">Text</option>
+          <option value="phone">Phone</option>
+          <option value="website">Website</option>
+          <option value="email">Email</option>
+          <option value="sms">SMS</option>
+          <option value="whatsapp">WhatsApp</option>
+        </select>
+      
+        <select>
+          <option disabled>Not Work It's Under Construction</option>
+          <option>Light</option>
+          <option>Dark</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="input-wrapper">
+      <div class="input-field-wrapper" id="input-field-box">
+        <input type="text" name="text" placeholder="Enter Text Here"/>
+      </div>
+      
+      <div class="input-button-wrapper">
+        <button id="reset-button">Reset</button>
+        <button id="generate-button">Generate</button>
+      </div>
+    </div>
+    
+    <div class="output-wrapper" id="output-wrapper">
+      <div class="canvas-wrapper">
+        <canvas id="qrcode-canvas"></canvas>
+      </div>
+      
+      <div class="output-button-wrapper">
+        <button id="hide-button">Hide</button>
+        <button id="download-button">Download</button>
+      </div>
+    </div>
   </div>
-  
-  <script src="script.js"></script>
   
 </body>
 </html>
